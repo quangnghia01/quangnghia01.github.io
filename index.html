@@ -1,1 +1,245 @@
-"Hello world" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Nhà sách Trung Nghĩa Hiếu</title>
+    <link rel="stylesheet" type="text/css" href="Script/Style.css"/>
+    <script type="text/javascript" src="Script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Script/Slider.js"></script>
+</head>
+
+<body>
+	<header>
+    	<div id="logo"><img src="Images/LOGO.jpg"/></div>
+        <div id="dn">
+            <img src="Images/dangnhap.jpg"/>
+            <a href="Dangnhap.html">Đăng nhập</a>
+            <span> &#124;</span>
+            <a href="Dangky.html">Đăng ký</a>
+            <img src="Images/Giohang.gif" />
+            <a href="#">Giỏ hàng (Trống)</a>
+        </div>
+    </header>
+    <nav>
+    	<div id="subnav">
+            <ul>
+                <li><b><a href="Trangchu.html">TRANG CHỦ</a></b></li>
+                <li><strong><a href="Gioithieu.html">GIỚI THIỆU</a></strong></li>
+                <li><strong><a href="#">LIÊN HỆ</a></strong></li>
+            </ul>
+            <div>
+                <input type="text" size="36" name="tsearch" placeholder="Hãy nhập tên sách cần tìm ..."/>
+                <input  type="submit" value="Tìm sách" title="Tìm sách"/>
+            </div>
+        </div>
+    </nav>
+    <div id="body"> <!--Quy định phần thân của trang-->
+    	<aside id= "slide">
+        	<div class="slide-paper">
+            	<div class="slide-control-prev"><<</div>
+				<div class="slide-control-next">>></div>            
+            </div>
+            <div class="slide-container">
+            	<div class="slide-stage">
+                	<div class="slide-image"><a href="#"><img src="Images/KT0001.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0002.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0003.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0004.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0005.jpg" width="75" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0006.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0007.jpg" width="75" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0008.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/KT0009.jpg" width="80" height="100" /></a></div>
+                    <div class="slide-image"><a href="#"><img src="Images/Kt.jpg" width="80" height="100" /></a></div>
+                </div>
+            </div>
+        </aside>
+    	<article>
+        	<aside id="left">
+            	<div>
+                    <p>SÁCH THEO CHỦ ĐỀ</p>
+                    <ul type="square">
+                        <li><a href="#">Ngoại ngữ</a></li>
+                        <li><a href="#">Công nghệ thông tin</a></li>
+                        <li><a href="#">Luật</a></li>
+                        <li><a href="#">Khoa học kỹ thuật</a></li>
+                        <li><a href="#">Nông nghiệp</a></li>
+                        <li><a href="#">Lịch sử địa lí</a></li>
+                        <li><a href="#">Văn học</a></li>
+                        <li><a href="#">Kinh tế</a></li>
+                        <li><a href="#">Kỹ thuật sống</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>SÁCH THEO NHÀ XUẤT BẢN</p>
+                    <ul>
+                        <li><a href="#">Nhà xuất bản trẻ</a></li>
+                        <li><a href="#">NXB Thống kê</a></li>
+                        <li><a href="#">Kim đồng</a></li>
+                        <li><a href="#">Đại học quốc gia</a></li>
+                        <li><a href="#">Văn hóa nghệ thuật</a></li>
+                        <li><a href="#">Văn hóa</a></li>
+                        <li><a href="#">Lao động - Xã hội</a></li>
+                        <li><a href="#">Khoa học &  Kỹ thuật</a></li>
+                    </ul>
+             	</div>
+                <div class="calendar">
+                	<p>LỊCH BIỂU</p>
+                    <script>
+						monthnames = new Array("January", "February","March","April","May","June",
+												"July","August","September","October","November","December");
+						var linkcount=0;						
+						function addlink (month,day,href){
+							var entry = new  Array(3);
+							entry[0]=month;
+							entry[1]=day;
+							entry[2]=href;
+							this[linkcount++]=entry;								
+						}
+						Array.prototype.addlink=addlink;
+						linkdays = new Array();
+						monthdays= new Array(12);
+						monthdays[0]=31;
+						monthdays[1]=28;
+						monthdays[2]=31;
+						monthdays[3]=30;
+						monthdays[4]=31;
+						monthdays[5]=30;
+						monthdays[6]=31;
+						monthdays[7]=31;
+						monthdays[8]=30;
+						monthdays[9]=31;
+						monthdays[10]=30;
+						monthdays[11]=31;
+						todayDate= new Date();
+						thisday= todayDate.getDay();
+						thismonth=todayDate.getMonth();
+						thisdate=todayDate.getDate();
+						thisyear=todayDate.getYear();
+						thisyear=thisyear % 100;
+						thisyear = ((thisyear<50) ? (2000+ thisyear) : (1900 + thisyear));
+						if (((thisyear % 4 == 0) && !(thisyear %100 == 0)) || (thisyear % 400 ==0)) monthdays[1]++;
+						startspaces= thisdate;
+						while(startspaces>7) startspaces -=7;
+						startspaces = thisday - startspaces +1;
+						if (startspaces <0) startspaces +=7;
+						document.write("<table>");
+						document.write("<tr><td colspan=7 class='monthyear' >" + 
+											monthnames[thismonth] + " " + thisyear +"</td></tr>");
+						document.write("<tr class='weektitle'>");
+						document.write("<td align=center>Sun</td>");
+						document.write("<td align=center>Mon</td>");
+						document.write("<td align=center>Tue</td>");
+						document.write("<td align=center>Wed</td>");
+						document.write("<td align=center>Thu</td>");
+						document.write("<td align=center>Fri</td>");
+						document.write("<td align=center>Sat</td>");
+						document.write("</tr>");		
+						
+						document.write("<tr>");				
+						for (s=0; s<startspaces;s++){
+							document.write("<td> </td>");
+						}
+						count =1;
+						while (count <=monthdays[thismonth]){
+							for(b= startspaces; b<7; b++){
+								linktrue=false;
+								document.write("<td class= 'weekday'>");
+								for (c=0; c<linkdays.length;c++){
+									if (linkdays[c]!=null){
+										if((linkdays[c][0]==thismonth+1)&&(linkdays[c][1]==count)){
+											document.write("<a href=\"" + linkdays[c][2] + "\">");
+											linktrue=true;	
+										}
+									}
+								}
+								if (count==thisdate){
+									document.write("<font color='FF0000'><strong>");									
+								}
+								if (count<= monthdays[thismonth]){
+									document.write(count);	
+								}
+								else{
+									document.write(" ");	
+								}
+								if (count==thisdate){
+									document.write("</strong></font>");	
+								}
+								if (linktrue)
+									document.write("</a>");
+								document.write("</td>");
+								count++;
+							}
+							document.write("</tr>");
+							document.write("<tr></tr>");
+							startspaces=0;
+						}
+						document.write("</table>");	
+					</script>
+
+                </div>
+            </aside>
+            <section>
+            	<p>Sách mới</p>
+            	<div class="sach">
+                    <p class="tensach"><a href="Chitietsanpham.html" target="_blank">Giáo trình Tin học cơ bản</a></p>
+                    <img class="hinhsach" src="Images/THCB.jpg" width="150px" title="Giáo trình tin học căn bản"/>
+                    <p class="dongia">Đơn giá: <span class="gia">26,000 VNĐ</span></p>
+                    <a href="#"><img class="nutchonmua" src="Images/Chonmua.png" width="150px" title="Chọn mua hàng" /></a>
+                </div>
+                <div class="sach">
+                    <p class="tensach"><a href="Chitietsanpham.html" target="_blank">Quản lí dự án</a></p>
+                    <img class="hinhsach" src="Images/KT0002.jpg" width="150px" title="Quản lí dự án"/>
+                    <p class="dongia">Đơn giá: <span class="gia">90,000 VNĐ</span></p>
+                    <a href="#"><img class="nutchonmua" src="Images/Chonmua.png" width="150px" title="Chọn mua hàng" /></a>
+                </div>
+                <div class="sach">
+                    <p class="tensach"><a href="Chitietsanpham.html" target="_blank">Tư duy chiến lược</a></p>
+                    <img class="hinhsach" src="Images/KT0003.jpg" width="150px" title="Tư duy chiến lược"/>
+                    <p class="dongia">Đơn giá: <span class="gia">99,000 VNĐ</span></p>
+                    <a href="#"><img class="nutchonmua" src="Images/Chonmua.png" width="150px" title="Chọn mua hàng" /></a>
+                </div>
+                <div class="sach">
+                    <p class="tensach"><a href="Chitietsanpham.html" target="_blank">Lý thuyết Tài chính - Tiền tệ</a></p>
+                    <img class="hinhsach" src="Images/KT0006.jpg" width="150px" title="Lý thuyết Tài chính - Tiền tệ"/>
+                    <p class="dongia">Đơn giá: <span class="gia">75,000 VNĐ</span></p>
+                    <a href="#"><img class="nutchonmua" src="Images/Chonmua.png" width="150px" title="Chọn mua hàng" /></a>
+                </div>
+                <div class="sach">
+                    <p class="tensach"><a href="Chitietsanpham.html" target="_blank">Mạng máy tính và hệ thống bảo mật</a></p>
+                    <img class="hinhsach" src="Images/KT0007.jpg" width="150px" title="Mạng máy tính và hệ thống bảo mật"/>
+                    <p class="dongia">Đơn giá: <span class="gia">54,000 VNĐ</span></p>
+                    <a href="#"><img class="nutchonmua" src="Images/Chonmua.png" width="150px" title="Chọn mua hàng" /></a>
+                </div>
+            </section>
+            <aside id="right">
+                <div id="sachbannhieu">
+                    <p>SÁCH BÁN NHIỀU</p>
+                    <marquee direction="up" scrollamount="3" scrolldelay="100" onmousemove="stop()" onmouseout="start()">
+                        <p><a href="#"><img src="Images/KT0009.jpg"/>Thủ Thuật Lập Trình Visual Basic 6</a></p>    
+                        <p><a href="#"><img src="Images/TH005.jpg"/>Hướng Dẫn Tự Học Photoshop CS (Photoshop CS6)</a></p>    
+                        <p><a href="#"><img src="Images/TH002.jpg"/>Căn Bản Về Photoshop CS Căn Bản Và Tinh Chỉnh</a></p>    
+                        <p><a href="#"><img src="Images/THCB.jpg"/>Tin Học Cơ Bản</a></p>    
+                    </marquee>
+                </div>
+                <div id="lienketwebsite">
+                    <p>LIÊN KẾT WEBSITE</p>
+                    <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                        <option selected="selected">--- Chọn trang liên kết ---</option>
+                        <option value="http://www.tdmu.edu.vn">Đh Thủ Dầu Một</option>
+                        <option value="http://www.iteee.tdmu.edu.vn">Khoa Kỹ thuật &#38; Công nghệ</option>
+                    </select>
+                </div>
+                <div id="thongketruycap">
+                    <p>THỐNG KÊ TRUY CẬP</p>
+                    <h4>Tổng truy cập: 1tr</h4>
+                    <h4>Đang online: 1k</h4>
+                </div>
+            </aside>
+        </article>
+    </div>
+    <footer>
+    	<p>&#169;2018 Nhà sách <a href="Trangchu.html">Trung Nghĩa Hiếu</a>. Alright Reserved.</p>
+        <p>Website được thiết kế phục vụ cho bài tập thực hành môn Thiết kế và Lập trình web.</p>
+        <p>Email: trungnghiahieu.thudaumotuniversity@gmail.com</p>
+	</footer>
